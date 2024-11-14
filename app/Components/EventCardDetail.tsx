@@ -26,6 +26,7 @@ export default function EventCardDetails({matchInfo}  : {matchInfo : Event}) {
   useEffect(()=>{
     const token = localStorage.getItem("luckyToken")
     if(!token){
+        toast.error("You are not Logined")
         router.push("/")
     }else{
       ;(async()=>{
