@@ -36,7 +36,7 @@ export default function RootLayout({
         <div className="min-h-screen">
         {children} </div>
         <Toaster
-            position="bottom-center"
+            position="top-center"
             reverseOrder={false}
           />
 
