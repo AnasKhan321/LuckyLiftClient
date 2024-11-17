@@ -5,6 +5,8 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import Navbar from "./Components/Navbar"
 import  { Toaster } from 'react-hot-toast';
 import {Footer}  from "./Components/Footer"
+
+// fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
