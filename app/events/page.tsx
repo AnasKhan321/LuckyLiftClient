@@ -7,7 +7,7 @@ export default async function Home() {
   let rdata  : Event[] | null ; 
 
   try{
-    const {data} = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL  as string}api/event/getevents`)
+    const {data} = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL  as string}api/event/getevents?_=${Date.now()}`)
     rdata = data
   }catch(error){
     rdata = null
