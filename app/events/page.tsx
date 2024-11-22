@@ -2,6 +2,7 @@
 import axios from "axios"
 import Events from "../Components/Events"
 import { Event } from "@/interfaces";
+export const dynamic = 'force-dynamic'
 export default async function Home() {
 
   let rdata  : Event[] | null ; 
