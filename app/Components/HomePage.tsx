@@ -71,7 +71,7 @@ export default  function HomePage({upcomingMatches}  : {upcomingMatches : Event[
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold mb-8 text-center md:text-left">Upcoming Matches</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingMatches.slice(1,3).map((match) => (
+            {upcomingMatches.slice(0,3).map((match) => (
               <Card key={match.id} className="bg-gray-800 border-gray-700">
                 <CardContent className="p-6">
                   <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-red-500">
