@@ -5,8 +5,10 @@ export default async function Page(){
   let rdata : Event[] | null ; 
 
   try {
-     const {data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL  as string}api/event/getevents`)
-     rdata = data ; 
+
+     const alldata = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL  as string}api/event/getevents` ,{ next: { revalidate: 60*60*12 }})
+     const newda =  await alldata.json() ; 
+     rdata = newda 
   } catch (error) {
     rdata = null 
     console.log(error)
